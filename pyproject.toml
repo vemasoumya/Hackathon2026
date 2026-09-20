@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hackathon-2026"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "PyYAML>=6.0.2",
+    "python-dotenv>=1.2.1",
+    "frontier-shared @ file:///C:/Users/subhasishm/Downloads/frontier_shared-0.1.13-py3-none-any.whl"
+]
+
+[project.optional-dependencies]
+tokenoptimizer = [
+    "streamlit>=1.40",
+    "pandas>=2.2",
+    "tiktoken>=0.8",
+    "github-copilot-sdk>=1.0",
+]
+
+[project.scripts]
+returns-refund-agent = "DemoAgents.ReturnsRefund.agent:main"
+token-report-export = "tokenoptimization.export:main"
+
+[tool.setuptools.packages.find]
+where = ["src", "."]
+include = ["DemoAgents*", "tokenoptimization*"]
+
+[tool.setuptools.package-data]
+"DemoAgents.ReturnsRefund" = ["instructions.txt", "knowledge/*.md", "*.mmd"]

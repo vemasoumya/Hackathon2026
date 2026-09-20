@@ -1,0 +1,25 @@
+.env
+.venv/
+
+# Generated package metadata
+*.egg-info/
+*.egg-info/*
+/hackathon_2026.egg-info/
+
+# Local build metadata files
+dependency_links.txt
+entry_points.txt
+PKG-INFO
+requires.txt
+SOURCES.txt
+top_level.txt
+<<<<<<< HEAD
+**/__pycache__/*
+=======
+.env
+
+# Python bytecode caches
+__pycache__/
+*.py[cod]
+*$py.class
+>>>>>>> origin/main
