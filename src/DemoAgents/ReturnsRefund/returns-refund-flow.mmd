@@ -1,0 +1,10 @@
+flowchart LR
+    A[Customer request] --> B[Extract intent and reason]
+    B --> C[Retrieve order]
+    C --> D[Retrieve applicable policy]
+    D --> E[Evaluate eligibility]
+    E --> F{Eligible?}
+    F -->|Yes| G[Choose refund or replacement]
+    F -->|No| H[Reject or route to warranty]
+    G --> I[Generate customer response]
+    H --> I
